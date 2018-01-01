@@ -8,4 +8,4 @@
     * [基础术语](machine_learning/chapter1-basic.md) 
     * [kNN算法](machine_learning/chapter2-knn.md) 
 * [3.命令记录](command/readme.md)
-    *  [vim](command/chapter1-vim.md)
+    *  [Vim](command/chapter1-vim.md)

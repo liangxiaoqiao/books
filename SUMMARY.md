@@ -7,5 +7,7 @@
 * [2.机器学习](machine_learning/readme.md)
     * [基础术语](machine_learning/chapter1-basic.md) 
     * [kNN算法](machine_learning/chapter2-knn.md) 
-* [3.命令记录](command/readme.md)
+* [3.计算机网络](computer_networking/readme.md)
+    * [基础概念](computer_networking/chapter1-计算机网络和因特网.md)
+* [4.命令记录](command/readme.md)
     *  [Vim](command/chapter1-vim.md)

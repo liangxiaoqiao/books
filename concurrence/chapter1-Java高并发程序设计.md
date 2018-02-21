@@ -49,29 +49,38 @@ a+b/a+nb = n - F(n-1)
 ### 2. Java并行程序基础
 1. 线程的基本状态
 2. 线程的基本操作 
-```
-1.新建
-2.终止
-3.线程中断
-4.等待（wait）和通知（notify）
-    wait()方法会释放目标对象的锁。sleep()不会释放任何资源。
-5.挂起（suspend）和继续执行（resume）线程
-    suspend()在挂起线程的同时，不会释放锁资源。
-    直到对应的线程上执行了resume()方法，被挂起的线程才能继续执行。
-    被挂起的线程还是Runnable。
-6.等待线程结束(join)和谦让(yield)
-    join()本质上是调用线程wait()在当前线程对象实例上
-    当线程执行完成后，被等待的线程会在退出前调用notifyAll()通知所有的等待线程继续执行
-    因此：不要在应用程序中，在Thread对象实例上使用wait()或notify()等方法，这很可能会印象系统API的工作，或被系统API影响
-7.volatile与Java内存模型(JMM)
-    volatile只是保证了线程的可见性，并不能保证多个线程对其进行修改
-8. 线程组 守护线程 线程优先级
-9. 线程安全和synchronized
-    指定加锁对象s
-    直接作用于实例方法
-    直接作用于类方法
-10. 无提示的错误：并发下的ArraLIst HashMap
-```
+    1. 新建
+    2. 终止
+    3. 线程中断
+    4. 等待（wait）和通知（notify）
+        wait()方法会释放目标对象的锁。sleep()不会释放任何资源。
+    5. 挂起（suspend）和继续执行（resume）线程(**不提倡使用**)
+        ```
+        suspend()在挂起线程的同时，不会释放锁资源。
+        直到对应的线程上执行了resume()方法，被挂起的线程才能继续执行。
+        被挂起的线程还是Runnable。
+        ```
+    6. 等待线程结束(join)和谦让(yield)
+        join()本质上是调用线程wait()在当前线程对象实例上
+        当线程执行完成后，被等待的线程会在退出前调用notifyAll()通知所有的等待线程继续执行
+        因此：不要在应用程序中，在Thread对象实例上使用wait()或notify()等方法，这很可能会印象系统API的工作，或被系统API影响
+    7. volatile与Java内存模型(JMM)
+        ```
+        volatile只是保证了线程的可见性，并不能保证多个线程对其进行修改
+        ```
+    8. 线程组 守护线程 线程优先级
+    9. 线程安全和synchronized
+        ```
+        指定加锁对象
+        普通方法加synchronized，直接作用于实例方法
+        静态方法加synchronized，直接作用于类方法
+        ```
+    10. 无提示的错误：并发下的ArraLIst HashMap
+        ```
+        ArrayList:size不正确，同步状态不正确，ArrayOutOfBonds
+        HashMap:size不正确，循环引用
+        ```
+
 
 ### 3. JDK并发包
 1. ReentrantLock 重入锁

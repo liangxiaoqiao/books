@@ -18,5 +18,5 @@
     * [并发1](concurrence/chapter1-Java高并发程序设计.md)
 * [6.Spring源码](spring_source/readme.md)
     * [Spring1](spring_source/chapter1.md)
-* [命令记录](command/readme.md)
-    *  [Vim](command/chapter1-vim.md)
+* [其他](command/readme.md)
+    *  [Vim命令自用](command/chapter1-vim.md)

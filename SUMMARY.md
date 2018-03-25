@@ -1,6 +1,6 @@
 # Summary
 
-* [简介](README.md)
+* [简介](index.md)
 * [1.读书笔记](my_note/readme.md)
 * [2.机器学习](machine_learning/readme.md)
     * [基础术语](machine_learning/chapter1-basic.md) 
@@ -18,5 +18,7 @@
     * [并发1](concurrence/chapter1-Java高并发程序设计.md)
 * [6.Spring源码](spring_source/readme.md)
     * [Spring1](spring_source/chapter1.md)
-* [其他](command/readme.md)
+* [7.算法问题](algorithm/readme.md)
+    * [回溯法-八皇后问题](algorithm/backtracking.md)
+* [8.其他](command/readme.md)
     *  [Vim命令自用](command/chapter1-vim.md)

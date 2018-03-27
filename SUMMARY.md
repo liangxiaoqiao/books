@@ -28,6 +28,7 @@
     * [matplotlib](python_data_analysis/chapter4-matplotlib.md)
 * [9.其他](others/readme.md)
     *  [Vim命令自用](others/chapter1-vim.md)
+    *  [Ubuntu命令](others/chapter1-ubuntu.md)
     *  [Nginx安装](others/chapter1-nginx.md)
     *  [Gitbook安装](others/chapter2-gitbook.md)
     *  [Mkdocs安装](others/chapter2-mkdocs.md)

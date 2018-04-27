@@ -25,7 +25,8 @@
 
 
 ## Deepin
-1. 更换默认python2.7为python3.6
+1. 安装JDK
+    
 
 
 

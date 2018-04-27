@@ -24,6 +24,9 @@
 1. nautilus 打开文件夹
 
 
+## Deepin
+1. 更换默认python2.7为python3.6
+
 
 
 

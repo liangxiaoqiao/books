@@ -26,8 +26,13 @@
 
 ## Deepin
 1. 安装JDK
-    
 
+2. 安装maven
+    1. 官网下载apache-maven-3.5.3-bin.tar.gz
+    1. 移动到/usr/lib
+    1. 解压  sudo tar -zxvf apache-maven-3.5.3-bin.tar.gz
+    1. 添加环境变量 sudo vim /etc/profile
+    1. 追加 
 
 
 

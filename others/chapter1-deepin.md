@@ -1,29 +1,3 @@
-## Ubuntu命令
-1. ssh远程登录： ssh ubuntu@110.230.210.36
-1. ssh添加文件： ssh-add ~/.ssh/id_rsa
-
-1. 更换源
-    ```bash
-    sudo gedit /etc/apt/sources.list
-    ```
-1. 启动jekins
-    ```shell
-    jenkins  sudo service jenkins start
-    jenkins colter liangchao123
-    ```
-1. apt-get不能进行
-    ```
-    Could not get lock /var/lib/apt/lists/lock
-    ps -ef | grep apt-get   查看进程
-    ```
-1. alias ll 查看别名
-    ```shell
-    alias设置只对当前起作用，想要一直起效，修改~/.bashrc目录 增加自己的alias
-    例如  alias lf='ls -lF'
-    ```
-1. nautilus 打开文件夹
-
-
 ## Deepin
 1. 安装JDK
     1. 下载JDK对应版本linux64包
@@ -61,6 +35,54 @@
         export M2_HOME=/usr/lib/apache-maven-3.5.3
         export PATH=$M2_HOME/bin:$PATH
         ```
+    1. 查看是否安装成功： mvn --version
+
+3. 安装gradle
+    1. 官网下载gradle-4.7.zip
+    1. 移动到/usr/lib
+    1. 解压  sudo unzip gradle-4.7.zip
+    1. 添加环境变量 sudo vim /etc/profile
+    1. 文件最后加上环境变量：
+
+        ```bash 
+        export GRADLE_HOME=/usr/lib/gradle-4.7
+        export PATH=$GRADLE_HOME/bin:$PATH
+        ```
+
+    1. 查看是否安装成功： gradle --version
 
 
 
+## Ubuntu命令
+1. ssh远程登录： ssh ubuntu@110.230.210.36
+1. ssh添加文件： ssh-add ~/.ssh/id_rsa
+
+1. alias ll 查看别名
+
+    ```shell
+    alias设置只对当前起作用，想要一直起效，修改~/.bashrc目录 增加自己的alias
+    例如  alias lf='ls -lF'
+    ```
+
+1. 更换源
+
+    ```bash
+    sudo gedit /etc/apt/sources.list
+    ```
+
+1. 启动jekins
+
+    ```shell
+    jenkins  sudo service jenkins start
+    jenkins colter liangchao123
+    ```
+
+1. apt-get不能进行
+ 
+    ```bash
+    adfasdfasdf
+    could not get lock /var/lib/apt/lists/lock
+    ps -ef | grep apt-get   查看进程
+    ```
+
+1. nautilus 打开文件夹

@@ -56,6 +56,7 @@
 ## Ubuntu命令
 1. ssh远程登录： ssh ubuntu@110.230.210.36
 1. ssh添加文件： ssh-add ~/.ssh/id_rsa
+1. ssh-copy-id localhost   ssh localhost
 
 1. alias ll 查看别名
 

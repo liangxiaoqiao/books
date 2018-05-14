@@ -34,6 +34,8 @@
 * [10.其他](others/readme.md)
     *  [Vim一些命令](others/chapter1-vim.md)
     *  [Deepin Ubuntu一些命令](others/chapter1-deepin.md)
+    *  [Grep命令](others/chapter1-grep.md)
+    *  [Find命令](others/chapter1-find.md)
     *  [Problems遇到的一些问题](others/chapter2-problems.md)
     *  [Excel](others/chapter3-excel.md)
     *  [镜面魔方教程](others/chapter3-镜面魔方.md)

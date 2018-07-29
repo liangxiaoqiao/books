@@ -1,5 +1,7 @@
 #### Flask教程
 
+##### 简单开始
+
 1. 简单程序
 
    ```python
@@ -21,7 +23,7 @@
    	app.run(debug=True)
    ```
 
-2.  路由和视图函数
+2. 路由和视图函数
 
    ```
    什么是路由？程序需要知道对每个URL请求运行哪些代码，所以保存了一个URL到python函数的映射关系。处理URL和函数之间关系的程序称为路由。
@@ -47,4 +49,29 @@
        return '<h1>Hello, your ID is %d!</h1>' % user_id
    ```
 
-   
+3. 请求上下文
+
+4. 请求调度
+
+5. 请求钩子
+
+   ```
+   before_first_request
+   before_request
+   after_request
+   teardown_request
+   ```
+
+6. 响应
+
+##### 模板
+
+1. 渲染模板
+2. 变量
+3. 控制结构
+4. 自定义错误页面
+5. 链接
+6. 静态文件
+
+##### 表单
+

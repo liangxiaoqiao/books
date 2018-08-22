@@ -4,5 +4,5 @@
 2. 安装jmeter插件管理器  （https://jmeter-plugins.org/downloads/all/）
 3. 将下载的 plugins-manager.jar 放到 jmeter的 lib/ext 文件夹下边
 4. 运行jmeter，点击菜单  options->plugins manager，在available plugins搜索PerfMon，选中安装后重启
-5. 
+5. 下载PerfMon Agent （https://github.com/undera/perfmon-agent），在 **server端 **解压启动
 

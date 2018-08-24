@@ -38,6 +38,8 @@
     1. [Mkdocs安装](install/chapter2-mkdocs.html)
     1. [Nginx安装](install/chapter1-nginx.html)
     1. [Swagger2安装](install/chapter3-swagger2.html)
+1. [测试相关](test/readme.html)
+    1. [Jmeter ServerAgent](test/chapter1-serveragent.html)
 1. [其他](others/readme.html)
     1. [Vim一些命令](others/chapter1-vim.html)
     1. [Deepin Ubuntu一些命令](others/chapter1-deepin.html)

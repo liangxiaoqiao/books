@@ -27,4 +27,45 @@
 
 ##### TensorFlow数据模型——张量
 
-1. 
+1. 张量是tensorflow管理数据的形式
+2. 从功能角度上，张量可以简单的被理解为多维数组。
+3. 张量中并没有真正保存数字，它保存的是如何得到这些数字的计算过程。
+4. 张量中主要保存了三个属性：名字，维度，类型。
+5. 张量的使用：
+   1. 对中间计算结果的引用 
+   2. 当计算图构造完成之后，张量可以用来获得计算结果。
+
+##### TensorFlow运行模型——会话
+
+1. tensorflow中的会话来执行定义好的运算
+
+2. 所有计算完成之后需要关闭会话来帮助系统回收资源。
+
+   ```python
+   # 创建一个会话
+   sess = tf.Session()
+   # 执行计算
+   sess.run(...)
+   # 关闭会话，释放资源
+   sess.close()
+   
+   # 为了解决异常退出时资源释放问题，可以通过python的上下文管理器来使用会话
+   with tf.Session() as sess:
+   	sess.run(...)
+   ```
+
+3. 设置默认会话
+
+   ```
+   sess = tf.Session()
+   with sess.as_default():
+   	print(result.eval())
+   
+   # 以下代码也可实现，以下两个命令具有相同的功能
+   sess = tf.Session()
+   sess.run(result)
+   result.eval(session=sess)
+   
+   ```
+
+   

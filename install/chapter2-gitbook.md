@@ -26,7 +26,16 @@
    5. 可选：安装cnpm   `npm install -g cnpm --registry=https://registry.npm.taobao.org`
      `sudo ln -s /opt/node-v8.11.3-linux-x64/bin/cnpm /usr/local/bin`
 
+3. 安装nodejs
 
-3. npm install gitbook-cli -g    (安装gitbook)
-4. sudo ln -s /opt/node-v8.11.3-linux-x64/bin/gitbook  /usr/local/bin   （建立软连接）
+   ```
+   1. sudo apt-get install nodejs
+   2. sudo apt install nodejs-legacy
+   3. sudo apt install npm
+   
+   ```
+
+4. npm install gitbook-cli -g    (安装gitbook)
+
+5. sudo ln -s /opt/node-v8.11.3-linux-x64/bin/gitbook  /usr/local/bin   （建立软连接）
 

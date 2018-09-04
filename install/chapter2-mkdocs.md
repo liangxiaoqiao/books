@@ -2,6 +2,12 @@
 1. 安装python3
     ```text
     建议安装python3。教程网上很多，搜下就行了。
+    切换python2 到 python3
+    sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 100
+    sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 150
+    
+    如果要切换到Python2，执行：
+    sudo update-alternatives --config python
     ```
 1. 确认python3安装成功:  
     ```

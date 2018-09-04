@@ -1,4 +1,7 @@
 ## Deepin
+
+##### 软件安装
+
 1. 安装JDK
     1. 下载JDK对应版本linux64包
     2. sudo mv jdk8.tar.gz /usr/lib/jvm
@@ -87,15 +90,18 @@
 
 
     如果 Fcitx 没有随桌面环境自动启动，或者您想修改下 Fcitx 启动参数，请用桌面环境提供的自动启动工具配置，或者直接编辑用户目录~/.config/autostart/ 下的 fcitx-autostart.desktop 文件以确认自动启动是否被禁用。如果用户目录下的文件并不存在，您可以复制自动启动文件 /etc/xdg/autostart/fcitx-autostart.desktop 到用户目录：
-
+    
     cp /etc/xdg/autostart/fcitx-autostart.desktop  ~/.config/autostart/
     ​```
 
 
 ## Ubuntu命令
 1. Linux Mint  Lubuntu Xubuntu都是基于ubuntu。
+
 2. ssh远程登录： ssh ubuntu@110.230.210.36
+
 3. ssh添加文件： ssh-add ~/.ssh/id_rsa
+
 4. ssh-copy-id localhost   ssh localhost
 
 5. alias ll 查看别名
@@ -127,3 +133,19 @@
     ```
 
 9. nautilus 打开文件夹
+
+
+
+
+
+##### 腾讯云在线文档安装
+
+1. 安装sz rz : sudo apt-get install lrzsz
+2. ssh-keygen -t rsa -C "" 生成ssh key
+3. 添加生成到公钥到git网站。ssh git@gitee.com查看是否成功
+4. 添加自定义的shell命令 (win下文件转linux bash文件 , vim 打开文件 ：set fileformat=unix 保存)
+5. 下载git仓库
+6. [安装gitbook](../install/chapter2-gitbook.md)
+7. [安装mkdocs](../install/chapter2-mkdocs.md)
+8. [安装并配置nginx](../install/chapter1-nginx.md)
+9. 启动

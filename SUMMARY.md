@@ -31,6 +31,7 @@
     *  [第四部分：战略设计](domain_driven/chapter4-战略设计.md)
 *  [Tensorflow实战](tensorflow_in_action/readme.md)
     *  [基础入门](tensorflow_in_action/chapter1-基础入门.md)
+    *  [深层神经网络](tensorflow_in_action/chapter2-深层神经网络.md)
 *  [算法问题](algorithm/readme.md)
     *  [回溯法-八皇后问题](algorithm/chapter1-backtracking.md)
     *  [动态规划](algorithm/chapter2-dynamicplanning.md)

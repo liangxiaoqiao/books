@@ -51,6 +51,62 @@
 
    2. 交叉熵 刻画了两个概率分部之间的距离，他是分类问题中使用比较广的一种损失函数。
 
-   3. Softmax回归将神经网络的输出贬称给一个概率分布。
+   3. Softmax回归将神经网络的输出变成一个概率分布。
 
-   4. 
+      ```python
+      cross_entropy = -tf.reduce_mean(
+      	y_ * tf.log(tf.clip_by_value(y,1e-10,1.0)))
+      # y_代表正确结果，y 代表预测结果
+      
+      ```
+
+7. 自定义损失函数
+
+   ```python
+   def test_custom_func():
+       """
+       1. 定义输入节点
+       2. 定义神经网络传播过程
+       3. 定义运算
+       4. 定义损失函数
+       5. 训练步骤
+       6. 训练
+       :return:
+       """
+       batch_size = 8
+       STEPS = 5000
+       data_size = 128
+       # 1.定义输入节点
+       x = tf.placeholder(tf.float32, shape=(None, 2), name="x-input")
+       y_ = tf.placeholder(tf.float32, shape=(None, 1), name="y-input")  # y_是神经网络预测值
+       # 2.定义神经网络传播过程
+       w1 = tf.Variable(tf.random_normal([2, 1], stddev=1, seed=1))
+       # 3.定义运算
+       y = tf.matmul(x, w1)  #
+   
+       # 4. 定义损失函数
+       loss_less = 10
+       loss_more = 1
+       loss = tf.reduce_mean(tf.where(tf.greater(y, y_), (y - y_) * loss_more, (y_ - y) * loss_less))
+       train_step = tf.train.AdamOptimizer(0.001).minimize(loss)
+   
+       # 模拟数据集
+       rdm = RandomState(1)
+       X = rdm.rand(data_size, 2)
+       Y = [[x1 + x2 + rdm.rand() / 10.0 - 0.05] for (x1, x2) in X]
+   
+       # 5.训练步骤
+       with tf.Session() as sess:
+           init_op = tf.global_variables_initializer()
+           sess.run(init_op)
+           # 6.开始训练
+           for i in range(STEPS):
+               start = (i * batch_size) % data_size
+               end = min(start + batch_size, data_size)
+               sess.run(train_step, feed_dict={x: X[start: end], y_: Y[start: end]})
+               print(sess.run(w1))
+   ```
+
+8. 梯度下降算法的缺点：1并不能保证被优化的函数打到全局最优解。2.计算时间太长。
+
+9. 为了综合梯度下降算法和随机梯度下降算法的优缺点：每次计算一小部分训练数据的损失函数。

@@ -71,30 +71,6 @@
     ```
 
     ​
-
-## ArchLinux 
-1. manjaro基于archlinux
-2. 汉语输入法不成功：[官网wiki](https://wiki.archlinux.org/index.php/Fcitx_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
-
-    ```shell
-    sudo pacman -S fcitx fcitx-im
-
-    安装fcitx后不能切换到中文输入法，搜索arch wiki,查看：arch fcitx 配置 打开 ~/.xprofile文件，添加以下代码：
-
-    #fcitx
-    export GTK_IM_MODULE=fcitx 
-    export QT_IM_MODULE=fcitx 
-    export XMODIFIERS="@im=fcitx"
-    ```
-
-
-
-    如果 Fcitx 没有随桌面环境自动启动，或者您想修改下 Fcitx 启动参数，请用桌面环境提供的自动启动工具配置，或者直接编辑用户目录~/.config/autostart/ 下的 fcitx-autostart.desktop 文件以确认自动启动是否被禁用。如果用户目录下的文件并不存在，您可以复制自动启动文件 /etc/xdg/autostart/fcitx-autostart.desktop 到用户目录：
-    
-    cp /etc/xdg/autostart/fcitx-autostart.desktop  ~/.config/autostart/
-    ​```
-
-
 ## Ubuntu命令
 1. Linux Mint  Lubuntu Xubuntu都是基于ubuntu。
 
@@ -149,3 +125,26 @@
 7. [安装mkdocs](../install/chapter2-mkdocs.md)
 8. [安装并配置nginx](../install/chapter1-nginx.md)
 9. 启动
+
+## ArchLinux 
+1. manjaro基于archlinux
+2. 汉语输入法不成功：[官网wiki](https://wiki.archlinux.org/index.php/Fcitx_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+
+    ```shell
+    sudo pacman -S fcitx fcitx-im
+
+    安装fcitx后不能切换到中文输入法，搜索arch wiki,查看：arch fcitx 配置 打开 ~/.xprofile文件，添加以下代码：
+
+    #fcitx
+    export GTK_IM_MODULE=fcitx 
+    export QT_IM_MODULE=fcitx 
+    export XMODIFIERS="@im=fcitx"
+    ```
+
+
+
+    如果 Fcitx 没有随桌面环境自动启动，或者您想修改下 Fcitx 启动参数，请用桌面环境提供的自动启动工具配置，或者直接编辑用户目录~/.config/autostart/ 下的 fcitx-autostart.desktop 文件以确认自动启动是否被禁用。如果用户目录下的文件并不存在，您可以复制自动启动文件 /etc/xdg/autostart/fcitx-autostart.desktop 到用户目录：
+
+    cp /etc/xdg/autostart/fcitx-autostart.desktop  ~/.config/autostart/
+    ​```
+

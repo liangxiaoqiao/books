@@ -13,3 +13,6 @@
     设置文件格式就可以了。
     查看文件格式 :set fileformat
     ```
+
+## curl
+1. curl -O  http://www.baidu.com/   下载文件

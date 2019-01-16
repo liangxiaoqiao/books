@@ -35,6 +35,8 @@
 *  [算法问题](algorithm/readme.md)
     *  [回溯法-八皇后问题](algorithm/chapter1-backtracking.md)
     *  [动态规划](algorithm/chapter2-dynamicplanning.md)
+*  [教程](course/readme.md)
+    *  [MongoDB](course/chapter1-mongodb.md)
 *  [其他书籍-笔记](my_note/readme.md)
     *  [习惯的力量](my_note/chapter1-the-power-of-habit.md)
 *  [软件安装](install/readme.md)

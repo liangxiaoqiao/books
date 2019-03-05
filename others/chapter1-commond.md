@@ -16,3 +16,13 @@
 
 ## curl
 1. curl -O  http://www.baidu.com/   下载文件
+
+## IDEA
+
+1. Keymap -> Main Menu ->Code -> Completion  Basic设置提示快捷键
+2. Appearance : Darcula  Yahei size 13    Editor Font :Source Code Pro 15
+3. 插件： BashSupport,  CodeGlance,Grep Console,Key Promoter, Lombok,PlantUml,TimeTransfer
+
+##  VSCode
+1. Extensions:AtomOneDarkTheme,Auto-OpenMarkdown,GitEasy
+2. Theme: One Dark Pro

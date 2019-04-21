@@ -70,37 +70,39 @@
     j -d #减少目录权重
     ```
 
-    ​
+    
 ## Ubuntu命令
 1. Linux Mint  Lubuntu Xubuntu都是基于ubuntu。
 
-2. ssh远程登录： ssh ubuntu@110.230.210.36
+2. 查看桌面用的什么：echo $DESKTOP_SESSION
 
-3. ssh添加文件： ssh-add ~/.ssh/id_rsa
+3. ssh远程登录： ssh ubuntu@110.230.210.36
 
-4. ssh-copy-id localhost   ssh localhost
+4. ssh添加文件： ssh-add ~/.ssh/id_rsa
 
-5. alias ll 查看别名
+5. ssh-copy-id localhost   ssh localhost
+
+6. alias ll 查看别名
 
     ```shell
     alias设置只对当前起作用，想要一直起效，修改~/.bashrc目录 增加自己的alias
     例如  alias lf='ls -lF'
     ```
 
-6. 更换源
+7. 更换源
 
     ```bash
     sudo gedit /etc/apt/sources.list
     ```
 
-7. 启动jekins
+8. 启动jekins
 
     ```shell
     jenkins  sudo service jenkins start
     jenkins colter liangchao123
     ```
 
-8. apt-get不能进行
+9. apt-get不能进行
 
     ```bash
     adfasdfasdf
@@ -108,7 +110,7 @@
     ps -ef | grep apt-get   查看进程
     ```
 
-9. nautilus 打开文件夹
+10. nautilus 打开文件夹
 
 
 
@@ -144,7 +146,7 @@
 
 
     如果 Fcitx 没有随桌面环境自动启动，或者您想修改下 Fcitx 启动参数，请用桌面环境提供的自动启动工具配置，或者直接编辑用户目录~/.config/autostart/ 下的 fcitx-autostart.desktop 文件以确认自动启动是否被禁用。如果用户目录下的文件并不存在，您可以复制自动启动文件 /etc/xdg/autostart/fcitx-autostart.desktop 到用户目录：
-
+    
     cp /etc/xdg/autostart/fcitx-autostart.desktop  ~/.config/autostart/
     ​```
 

@@ -60,10 +60,25 @@ sequenceDiagram
     loop Healthcheck
         John->John: Fight against hypochondria
     end
-    Note right of John: Rational thoughts <br/>prevail...
+    Note right of John: Rational thoughts <br/> prevail...
     John-->Alice: Great!
     John->Bob: How about you?
     Bob-->John: Jolly good!
+```
+
+```puml
+@startuml
+    participant Alice
+    participant Bob
+    Alice->John: Hello John, how are you?
+    loop Healthcheck
+        John->John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/> prevail...
+    John-->Alice: Great!
+    John->Bob: How about you?
+    Bob-->John: Jolly good!
+@enduml
 ```
 
 ```mermaid
@@ -93,8 +108,35 @@ B->>A: Great!
 
 ```puml
 @startuml
-testdot
+A ->> B : How are you?
+B ->> A : Great!
 @enduml
+```
+
+
+```puml
+title 时序图
+
+== 鉴权阶段 ==
+
+Alice -> Bob: 请求
+Bob -> Alice: 应答
+
+== 数据上传 ==
+
+Alice -> Bob: 上传数据
+note left: 这是显示在左边的备注
+
+Bob --> Canny: 转交数据
+... 不超过 5 秒钟 ...
+Canny --> Bob: 状态返回
+note right: 这是显示在右边的备注
+
+Bob -> Alice: 状态返回
+
+== 状态显示 ==
+
+Alice -> Alice: 给自己发消息
 ```
 
 ```puml
@@ -112,5 +154,16 @@ database "<$cassandra>" as cassandra
 webapp -> kafka
 kafka -> daemon
 daemon --> cassandra
+@enduml
+```
+
+```puml
+@startuml
+Object <|-- ArrayList
+
+Object : equals()
+ArrayList : Object[] elementData
+ArrayList : size()
+
 @enduml
 ```

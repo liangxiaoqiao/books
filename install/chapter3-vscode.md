@@ -25,7 +25,8 @@
 6. plantuml不能执行问题
 
    ```
-   添加环境变量
+   安装 graphviz（参看下边的下载地址）
+   添加环境变量 （路径为你的安装路径）
    DGRAPHVIZ_DOT  D:/Users/Nonghorn/Personal App/graphviz/bin/dot.exe
    ```
 

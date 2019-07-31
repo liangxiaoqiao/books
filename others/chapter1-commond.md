@@ -21,7 +21,7 @@
 
 1. Keymap -> Main Menu ->Code -> Completion  Basic设置提示快捷键
 2. Appearance : Darcula  Yahei size 13    Editor Font :Source Code Pro 15
-3. 插件： BashSupport,  CodeGlance,Grep Console,Key Promoter, Lombok,PlantUml,TimeTransfer
+3. 插件： BashSupport,  CodeGlance,Grep Console,Key Promoter, Lombok,PlantUml,Time Transfer
 
 ##  VSCode
 1. Extensions:AtomOneDarkTheme,Auto-OpenMarkdown,GitEasy

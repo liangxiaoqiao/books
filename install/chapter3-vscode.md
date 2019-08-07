@@ -15,12 +15,9 @@
    
 
 5. ~~plantuml不能执行问题~~ 
-
-   ```json
-   "plantuml.commandArgs": [
+    ~~"plantuml.commandArgs": [
        "-DGRAPHVIZ_DOT=\"D:/Users/Nonghorn/Personal App/graphviz/bin/dot.exe\"",
-   ]
-   ```
+   ]~~
 
 6. plantuml不能执行问题
 

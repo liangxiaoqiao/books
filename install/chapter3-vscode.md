@@ -9,7 +9,7 @@
 4. 添加json字段，修复 mermaid图是黑框的问题
 
    ```json
-   "markdown-preview-enhanced.mermaidTheme": "forest
+   "markdown-preview-enhanced.mermaidTheme": "forest"
    ```
 
    
@@ -42,11 +42,18 @@
 ##### Demo
 
 ```mermaid
-graph TD;
+graph LR;
+id  
+id1[text in the box]
+id2(text in round box)
+id3((text int the circle))
+
 A-->B;
 A-->C;
 B-->D;
 C-->D;
+C-->id1;
+id1--> id3;
 ```
 
 
@@ -54,7 +61,7 @@ C-->D;
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice->John: Hello John, how are you?
+    Alice -> John: Hello John, how are you?
     loop Healthcheck
         John->John: Fight against hypochondria
     end
@@ -64,21 +71,30 @@ sequenceDiagram
     Bob-->John: Jolly good!
 ```
 
-```puml
-@startuml
-    participant Alice
-    participant Bob
-    Alice->John: Hello John, how are you?
-    loop Healthcheck
-        John->John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts <br/> prevail...
-    John-->Alice: Great!
-    John->Bob: How about you?
-    Bob-->John: Jolly good!
-@enduml
+```mermaid
+sequenceDiagram
+A->> B: Query
+B->> C: Forward query
+Note right of C: Thinking...
+C->> B: Response
+B->> A: Forward response
 ```
-
+```mermaid
+classDiagram
+Class01 <|-- AveryLongClass : Cool
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 --> C2 : Where am i?
+Class09 --* C3
+Class09 --|> Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+Class08 <--> C2: Cool label
+```
 ```mermaid
 gantt
         dateFormat  YYYY-MM-DD
@@ -98,7 +114,20 @@ gantt
 
 ```
 
-
+```puml
+@startuml
+    participant Alice
+    participant Bob
+    Alice->John: Hello John, how are you?
+    loop Healthcheck
+        John->John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/> prevail...
+    John-->Alice: Great!
+    John->Bob: How about you?
+    Bob-->John: Jolly good!
+@enduml
+```
 ```sequence {{theme="hand"}}
 A->>B: How are you?
 B->>A: Great!
@@ -113,6 +142,8 @@ B ->> A : Great!
 
 
 ```puml
+@startuml
+
 title 时序图
 
 == 鉴权阶段 ==
@@ -135,6 +166,7 @@ Bob -> Alice: 状态返回
 == 状态显示 ==
 
 Alice -> Alice: 给自己发消息
+@enduml
 ```
 
 ```puml

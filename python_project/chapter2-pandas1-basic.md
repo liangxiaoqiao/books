@@ -74,43 +74,58 @@ def pandas_filter():
     print(df)
 ```
 
-##### 6. 分组柱状图
+##### 6. 条件格式
 ```python
-def pandas_bar_graph():
+# applymap作用每一个单元格  
+# apply分别作用域每一列
+def pandas_condition():
     users = pd.read_excel("c:\\test\\create_20162017.xlsx", index_col='ID')
-    users.sort_values(by='2017', inplace=True, ascending=False)
-    users.plot.bar(x='Name', y=['2016', '2017'],
-                   color=['red', 'green'], title="This is first graph")
-    # plt.xticks(rotation=50)
-    plt.xlabel('Names')
-    plt.ylabel('Scores')
-    plt.title('Mat plot Graph', fontweight='bold')
-    ax = plt.gca()
-    ax.set_xticklabels(users.Name, rotation=45, ha='right')
-    plt.gcf().subplots_adjust(right=0.8, bottom=0.1)
-    plt.show()
+    users = users.style.applymap(less, subset=['2016', '2017', '2018']) \
+        .apply(more, subset=['2016', '2017', '2018'])
+    print(type(users))
+    users.to_excel("c:\\test\\test2.xlsx")
 ```
 
-##### 7.叠加柱状图 横向
+##### 7.行列操作
 ```python
-def pandas_add_grp():
-    users = pd.read_excel("c:\\test\\create_20162017.xlsx", index_col='ID')
-    users['MyTotal'] = users['2016'] + users['2017'] + users['2018']
-    users.sort_values(by='MyTotal', ascending=True, inplace=True)
-    # users.plot.bar(x='Name', y=['2016', '2017', '2018'], stacked=True) # 竖直
-    users.plot.barh(x='Name', y=['2016', '2017', '2018'], stacked=True)  # 水平
-    plt.title("Three Graph", fontweight='bold')
-    # plt.gca().set_xticklabels(users.Name, rotation=45, ha='right')
-    plt.xlabel("Names", fontsize=10)
-    plt.ylabel("Scores", fontsize=10)
-    plt.show()
-```
+def pandas_row_col_handle():
+    df1 = pd.read_excel("c:\\test\\create_20162017.xlsx")
+    df2 = pd.read_excel("c:\\test\\create_20162017_2.xlsx")
+    # 合并 按行添加到最后一行右边
+    students = df1.append(df2)
+    # 重建索引
+    students.reset_index(drop=True)
+    # 增
+    alex = pd.Series({"ID": 100, "Name": "Alex", "Bool": "True", "2016": 99, "2017": 98, "2018": 90})
+    students = students.append(alex, ignore_index=True)
+    alex2 = pd.Series({"ID": 100, "Name": "Alex2", "Bool": "True", "2016": 99, "2017": 98, "2018": 90})
+    students = students.loc[:10].append(alex2, ignore_index=True).append(students[10:])
+    # 删
+    students.drop(index=range(0, 5), inplace=True)
+    students.drop(index=students[0:5].index, inplace=True)
+    students = students.reset_index(drop=True)
+    # 改
+    students.at[0, "2016"] = 150
+    students.iloc[1] = alex2
+    students['Total'] = students['2016'] + students['2017'] + students['2018']
+    # filter
+    filter_index = students.loc[students['Name'].apply(lambda name: name == 'Iso')].index
+    students.drop(index=filter_index, inplace=True)
 
-##### 8.饼图
-```python
-def pandas_pie():
-    users = pd.read_excel("c:\\test\\create_20162017.xlsx", index_col='Name')
-    users['MyTotal'] = users['2016'] + users['2017'] + users['2018']
-    users['2017'].plot.pie(counterclock=False)
-    plt.show()
+    # Col
+    # 合并 按列添加到右侧
+    # students = pd.concat([df1, df2], axis=1)
+    students = pd.concat([df1, df2])  # 竖直添加
+    # 增
+    students['Age'] = 18
+    students.insert(1, column='Index1', value=5)
+    # 删
+    students.drop(columns=['Bool', 'Age'], inplace=True)
+    # 改
+    students.rename(columns={"Index1": "INDEX1", "Name": "NAME"}, inplace=True)
+    for i in range(5, 10):
+        students['NAME'].at[i] = np.nan
+    # drop
+    students.dropna(subset=['NAME'], inplace=True)
+    print(students)
 ```

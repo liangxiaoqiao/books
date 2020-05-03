@@ -39,6 +39,36 @@ def pandas_pie():
     plt.show()
 ```
 
+##### 4. 散点图
+
+```python
+pb.plot.scatter(x="Name",y="Year")
+```
+##### 5. 直方图
+```python
+homes['col'].plot.hist(bins=100) 
+```
+
+##### 6. 密度图
+```python
+homes['col'].plot.kde()
+```
+
+##### 7. 透视图
+```python
+def pandas_pivot():
+    df = pd.read_excel("c:\\test\\create_all.xlsx")
+    pt1 = df.pivot_table(index="School", columns="Grade", values="2017", aggfunc=np.sum)
+    # print(pt1)
+
+    groups = df.groupby(['School', "Grade"])
+    s = groups['2017'].sum()
+    r = groups['2019'].sum()
+    t = groups['2020'].sum()
+
+    pt2 = pd.DataFrame({"Total 2017": s, "Total 2019": r, "Total 2020": t})
+    print(pt2)
+```
 
 ##### 图
 ```python

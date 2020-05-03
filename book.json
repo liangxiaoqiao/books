@@ -1,5 +1,7 @@
 {
-    "plugins": ["icp"],
+    "plugins": [
+        "icp"
+    ],
     "pluginsConfig": {
         "icp": {
             "number": "沪ICP备17026562号-1"

@@ -3,7 +3,7 @@
 1. 跳到文件开始 :0
 1. 跳到文件结尾 :$
 1. 跳到872行  :872
-1. 删除1-5行 :1,5d 
+1. 删除1-5行 :1,5d
 1. 删除某一行到当前行  :122,.d
 1. 删除当前行到文件末尾 :,$
 1. 翻页：ctrl+b ctrl+f   back forward
@@ -21,7 +21,7 @@
 
 1. Keymap -> Main Menu ->Code -> Completion  Basic设置提示快捷键
 2. Appearance : Darcula  Yahei size 13    Editor Font :Source Code Pro 15
-3. 插件： BashSupport,  CodeGlance,Grep Console,Key Promoter, Lombok,PlantUml,Time Transfer
+3. 插件： BashSupport,  CodeGlance,Grep Console,Key Promoter,PlantUml,Time Transfer, Rainbow Brackets, Indent Rainbow.
 
 ##  VSCode
 1. Extensions:AtomOneDarkTheme,Auto-OpenMarkdown,GitEasy

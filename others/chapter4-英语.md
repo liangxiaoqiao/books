@@ -1,6 +1,6 @@
 #### 音标
 
-1. 前元音： /i:/  /ɪ/ 
+1. 前元音： /i:/  /ɪ/
 
    ```
    eat it
@@ -17,18 +17,18 @@
    top talk
    ```
 
-3.  前元音：/e/ /æ/ 
+3.  前元音：/e/ /æ/
 
    ```
    bed bad
-   get gap 
+   get gap
    head hat
    pet pack
    test task
    wet wax
    ```
 
-4. 后元音： /u:/ /ʊ/  
+4. 后元音： /u:/ /ʊ/
 
    ```
    cool cook
@@ -37,5 +37,5 @@
    root rook
    ```
 
-   
+
 

@@ -17,6 +17,8 @@
         *  [并发1](my_books/book_concurrence/chapter1-Java高并发程序设计.md)
     *  [Spring源码-笔记](my_books/book_spring_source/readme.md)
         *  [Spring1](my_books/book_spring_source/chapter1.md)
+    *  [软件工程](my_books/book_software_engineering/readme.md)
+        *  [Spring1](my_books/book_software_engineering/chapter1-software.md)
     *  [领域驱动设计-笔记](my_books/book_domain_driven/readme.md)
         *  [第一部分：运用领域模型](my_books/book_domain_driven/chapter1-运用领域模型.md)
         *  [第二部分：模型驱动设计的构造块](my_books/book_domain_driven/chapter2-模型驱动设计的构造块.md)

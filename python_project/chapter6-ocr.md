@@ -1,12 +1,12 @@
 ### Python安装OCR
 
 ```
-安装的anaconda 使用环境：Python3.6 
+安装的anaconda 使用环境：Python3.6
 ```
 
 ##### Windows安装
 
-1. 安装pillow 
+1. 安装pillow
 
    ```
    anaconda安装： conda install pillow
@@ -14,7 +14,7 @@
    python安装：pip install pillow
    ```
 
-   
+
 
 2. 安装pytesseract
 

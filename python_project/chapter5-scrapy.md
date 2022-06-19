@@ -10,7 +10,7 @@
    2. 编写爬去网站的spider并提取item
    3. 编写Item Pipeline来存储提取到的Item（即数据）
 
-1. #### 结构 
+1. #### 结构
 
 ```text
 tutorial/

@@ -15,9 +15,9 @@
 
    2. 解压并移动到文件夹 /opt/node
 
-   3. 建立全局变量 
+   3. 建立全局变量
 
-      sudo ln -s /opt/node/bin/node /usr/local/bin/node   
+      sudo ln -s /opt/node/bin/node /usr/local/bin/node
 
       sudo ln -s /opt/node/bin/npm /usr/local/bin/npm
 
@@ -32,7 +32,7 @@
    1. sudo apt-get install nodejs
    2. sudo apt install nodejs-legacy
    3. sudo apt install npm
-   
+
    ```
 
 4. npm install gitbook-cli -g    (安装gitbook)

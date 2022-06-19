@@ -28,7 +28,7 @@
            proxy_pass http://127.0.0.1:4000;
        }
    }
-   
+
    server {
      listen 80;
        server_name doc.liangxiaoqiao.com;
@@ -36,7 +36,7 @@
            proxy_pass http://127.0.0.1:8000;
        }
    }
-   
+
    server {
      listen 80;
        server_name liangxiaoqiao.com;
@@ -44,7 +44,7 @@
            proxy_pass http://127.0.0.1:4000;
        }
    }
-   
+
    重启
    ```
 

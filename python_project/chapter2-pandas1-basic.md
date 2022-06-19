@@ -77,7 +77,7 @@
 1. ##### 条件格式
 
     ```python
-    # applymap作用每一个单元格  
+    # applymap作用每一个单元格
     # apply分别作用域每一列
     def pandas_condition():
         users = pd.read_excel("c:\\test\\create_20162017.xlsx", index_col='ID')

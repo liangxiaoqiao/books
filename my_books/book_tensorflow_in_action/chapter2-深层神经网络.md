@@ -44,7 +44,7 @@
 
       ```
       判断零件合格不合格是一个二分类问题。判断手写数字可以归纳为十分类问题。
-      
+
       解决二分类问题：设置一个阈值。（节点输出越接近0，越有可能是不合格的。越接近1，越有可能是合格的。所以可以设置阈值为0.5，区分合格与不合格。）
       解决多分类问题最常用的方法是设置n个输出节点。对于每一个样例，得到一个n维数组，对应k上的节点输出值应为1，其它节点为0.（如何判断向量和期望的向量有多接近呢？ 交叉熵是常用的评判方法之一。）
       ```
@@ -57,7 +57,7 @@
       cross_entropy = -tf.reduce_mean(
       	y_ * tf.log(tf.clip_by_value(y,1e-10,1.0)))
       # y_代表正确结果，y 代表预测结果
-      
+
       ```
 
 7. 自定义损失函数
@@ -83,18 +83,18 @@
        w1 = tf.Variable(tf.random_normal([2, 1], stddev=1, seed=1))
        # 3.定义运算
        y = tf.matmul(x, w1)  #
-   
+
        # 4. 定义损失函数
        loss_less = 10
        loss_more = 1
        loss = tf.reduce_mean(tf.where(tf.greater(y, y_), (y - y_) * loss_more, (y_ - y) * loss_less))
        train_step = tf.train.AdamOptimizer(0.001).minimize(loss)
-   
+
        # 模拟数据集
        rdm = RandomState(1)
        X = rdm.rand(data_size, 2)
        Y = [[x1 + x2 + rdm.rand() / 10.0 - 0.05] for (x1, x2) in X]
-   
+
        # 5.训练步骤
        with tf.Session() as sess:
            init_op = tf.global_variables_initializer()

@@ -46,7 +46,7 @@ pb.plot.scatter(x="Name",y="Year")
 ```
 ##### 5. 直方图
 ```python
-homes['col'].plot.hist(bins=100) 
+homes['col'].plot.hist(bins=100)
 ```
 
 ##### 6. 密度图

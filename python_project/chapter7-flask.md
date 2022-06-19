@@ -6,18 +6,18 @@
 
    ```python
    # 安装 pip install flask
-   
+
    # 导入
    from flask import Flask
-   
+
    # 创建
    app = Flask(__name__)
-   
+
    # 路由和视图函数
    @app.route("/")
    def index():
        return '<h1> Hello, World!</h1>'
-   
+
    # 运行
    if __name__ == '__main__':
    	app.run(debug=True)
@@ -27,9 +27,9 @@
 
    ```
    什么是路由？程序需要知道对每个URL请求运行哪些代码，所以保存了一个URL到python函数的映射关系。处理URL和函数之间关系的程序称为路由。
-   
+
    如何定义一个路由？最简单的方法使用程序实例提供的app.route修饰器，把修饰的函数注册为路由。
-   
+
    什么是视图函数？上边修饰的函数就是视图函数。
    ```
 

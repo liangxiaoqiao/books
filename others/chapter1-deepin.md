@@ -20,12 +20,12 @@
     7. 设置优先级比1081大
 
         ```bash
-            sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk8/bin/java 3000 
-            sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk8/bin/javac 3000 
+            sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk8/bin/java 3000
+            sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk8/bin/javac 3000
             sudo update-alternatives --install /usr/bin/jar jar /usr/lib/jvm/jdk8/bin/jar 3000
         ```
 
-    8. 查看是否安装成功： java --version 
+    8. 查看是否安装成功： java --version
 
 2. 安装maven
     1. 官网下载apache-maven-3.5.3-bin.tar.gz
@@ -34,7 +34,7 @@
     4. 添加环境变量 sudo vim /etc/profile
     5. 文件最后加上环境变量：
 
-        ```bash 
+        ```bash
         export M2_HOME=/usr/lib/apache-maven-3.5.3
         export PATH=$M2_HOME/bin:$PATH
         ```
@@ -51,7 +51,7 @@
 
     5. 文件最后加上环境变量：
 
-        ```bash 
+        ```bash
         export GRADLE_HOME=/usr/lib/gradle-4.7
         export PATH=$GRADLE_HOME/bin:$PATH
         ```
@@ -69,7 +69,7 @@
     j -s #查看状态
     j -d #减少目录权重
     ```
-    
+
 ## Ubuntu命令
 1. Linux Mint  Lubuntu Xubuntu都是基于ubuntu。
 
